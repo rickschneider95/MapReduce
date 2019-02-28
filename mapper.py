@@ -1,25 +1,10 @@
 #!/usr/bin/env python
 import sys
 
-#get the size of the matrices from a size file:
-info = open("matrix_size.txt").readlines()
-for info_line in info:
-    info_line = info_line.strip()
-    matrix,i,j = info_line.split(",")
-    if matrix == "A":
-        #error prone type conversion
-        try:
-            A_i = int(i)
-        except ValueError:
-            continue
-    else:
-        try:
-            B_j = int(j)
-        except ValueError:
-            continue
-
 #actual mapping algorithm that needs A_i, B_i and text file as input
 for line in sys.stdin:
+    A_i = 600
+    B_j = 600
     line = line.strip()
     matrix,i,j,v = line.split(",")
 
