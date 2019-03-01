@@ -6,11 +6,5 @@ for line in sys.stdin:
     B_j = 600
     line = line.strip()
     matrix,i,j,v = line.split(",")
-    if matrix == "A":
-        for ind in range(1,B_j+1):
-            key = i + "," + str(ind)
-            print("rick")
-    else:
-        for ind in range(1,A_i+1):
-            key = str(ind) + "," + j
-            print("rick")
+    for ind in range(1,B_j+1):
+        key = str(i) + "," + str(ind)
