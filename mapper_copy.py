@@ -6,3 +6,4 @@ for line in sys.stdin:
     B_j = 600
     line = line.strip()
     matrix,i,j,v = line.split(",")
+    print '%s\t%s\t%s' % (i, j, j)
