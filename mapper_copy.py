@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 import sys
 
 for line in sys.stdin:
@@ -9,6 +9,8 @@ for line in sys.stdin:
     if matrix == "A":
         for ind in range(1,B_j+1):
             key = i + "," + str(ind)
+            print "%s\t%s\t%s"%(key,j,v)
     else:
         for ind in range(1,A_i+1):
             key = str(ind) + "," + j
+            print "%s\t%s\t%s"%(key,i,v)
