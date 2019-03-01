@@ -17,15 +17,3 @@ for line in sys.stdin:
         for ind in range(1,A_i+1):
             key = str(ind) + "," + j
             print "%s\t%s\t%s"%(key,i,v)
-
-
-###idea:
-#1)add combiner, i.e. local aggregation
-#2)implement normal matrix multiplication and test (i.e. triple for loop --> time O(n^3) , enormous memory consumption; as not distributed, no advantage of sparsity), 
-# see http://www.joefkelley.com/853/ 
-# also compare advantage of sparsity
-#The first is based on the fact that if you store the matrixes as a tuples (i, j, x) meaning aij=x, 
-#then the multiplication is equivalent to a relation algebra join followed by a group by and aggregation.
-# 
-# change log
-# 1)   
